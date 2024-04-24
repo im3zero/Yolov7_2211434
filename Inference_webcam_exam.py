@@ -18,6 +18,7 @@ from collections import OrderedDict,namedtuple
 providers = ['CUDAExecutionProvider', 'CPUExecutionProvider'] if cuda else ['CPUExecutionProvider'] #['AzureExecutionProvider', 'CPUExecutionProvider'] if cuda else ['CPUExecutionProvider']
 session = ort.InferenceSession(w, providers=providers)
 
+#fixed part
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 with tf.compat.v1.Session() as sess:
